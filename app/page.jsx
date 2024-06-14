@@ -6,7 +6,7 @@ import Navbar from "../components/navbar/page";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <form action={logout}>
           <button type="submit">
             Logout
