@@ -30,16 +30,17 @@ export async function signup(formData) {
       return false
     }
 
-    if (await emailExists(data.email)) {
-      return { error: 'Email already exists' }
-    }
+    // if (await emailExists(data.email)) {
+    //   return { error: 'Email already exists' }
+    // }
 
     const { error } = await supabase.auth.signUp(data)
 
     if (error) {
       return { error: error.message }
-    }
 
-    revalidatePath('/', 'layout')
-    redirect('/')
+    }
+    redirect('/verify?email=' + data.email)
+
+    console.log('signup success')
 }

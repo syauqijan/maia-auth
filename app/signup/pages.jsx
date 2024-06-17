@@ -54,7 +54,7 @@ export default function SignUpPage() {
       <div className='flex mb-10'>
         <h1 className='text-2xl font-medium'>Sign up To Reflect</h1>
       </div>
-      <form className='flex flex-col items-start justify-start w-full h-full' onSubmit={handleSubmit}>
+      <form className='flex flex-col items-start justify-start w-full h-full' >
         <label className="text-md mb-2" htmlFor="name">Your Name</label>
         <input className="border w-full min-h-7 mb-5 rounded-md p-2" 
           id="name" 
@@ -111,7 +111,7 @@ export default function SignUpPage() {
           
         )}
         
-        <button className="w-full min-h-7 rounded-md p-2 bg-tertiary text-white" type="submit">Sign up</button>
+        <button className="w-full min-h-7 rounded-md p-2 bg-tertiary text-white" formAction={signup}>Sign up</button>
       </form>
       <div className='flex flex-col items-center justify-center mt-8 text-sm'>
         <div className='flex text-center items-center justify-center'>
